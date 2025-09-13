@@ -15,26 +15,24 @@ import net.sage.rice.block.ModBlocks;
 import net.sage.rice.item.custom.RiceballItem;
 
 public class ModItems {
-    public static final Item RICE = registerBlockItem("rice", new Item.Settings().useBlockPrefixedTranslationKey(), ModBlocks.RICE_CROP);
-    public static final Item RICEBALL = registerRiceballItem("riceball", new Item.Settings().maxCount(16));
-    public static final Item RICE_DUST = registerItem("rice_dust", new Item.Settings());
+    public static final RegistryKey<Item> RICE_KEY = getRegistryKey("rice");
+    public static final RegistryKey<Item> RICEBALL_KEY = getRegistryKey("riceball");
+    public static final RegistryKey<Item> RICE_DUST_KEY = getRegistryKey("rice_dust");
 
-    private static Item registerBlockItem(String name, Item.Settings itemSettings, Block block) {
-        Identifier id = Identifier.of(Rice.MOD_ID, name);
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        return Registry.register(Registries.ITEM, key, new BlockItem(block, itemSettings.registryKey(key)));
+    public static final Item RICE = registerItem(new BlockItem(ModBlocks.RICE_CROP, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RICE_KEY)), RICE_KEY);
+    public static final Item RICEBALL = registerItem(new RiceballItem(new Item.Settings().maxCount(16).registryKey(RICEBALL_KEY)), RICEBALL_KEY);
+    public static final Item RICE_DUST = registerItem(new Item.Settings(), RICE_DUST_KEY);
+
+    private static RegistryKey<Item> getRegistryKey(String name) {
+        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Rice.MOD_ID, name));
     }
 
-    private static Item registerRiceballItem(String name, Item.Settings itemSettings) {
-        Identifier id = Identifier.of(Rice.MOD_ID, name);
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        return Registry.register(Registries.ITEM, key, new RiceballItem(itemSettings.registryKey(key)));
+    private static Item registerItem(Item.Settings itemSettings, RegistryKey<Item> registryKey) {
+        return Registry.register(Registries.ITEM, registryKey, new Item(itemSettings.registryKey(registryKey)));
     }
 
-    private static Item registerItem(String name, Item.Settings itemSettings) {
-        Identifier id = Identifier.of(Rice.MOD_ID, name);
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        return Registry.register(Registries.ITEM, key, new Item(itemSettings.registryKey(key)));
+    private static Item registerItem(Item item, RegistryKey<Item> registryKey) {
+        return Registry.register(Registries.ITEM, registryKey, item);
     }
 
     public static void registerModItems() {

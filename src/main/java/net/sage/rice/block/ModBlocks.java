@@ -1,6 +1,7 @@
 package net.sage.rice.block;
 
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
@@ -14,16 +15,25 @@ import net.minecraft.util.Identifier;
 import net.sage.rice.block.custom.RiceCropBlock;
 
 public class ModBlocks {
+    public static final RegistryKey<Block> RICE_CROP_KEY = getRegistryKey("rice_crop");
 
-    public static final Block RICE_CROP = registerBlockWithoutBlockItem("rice_crop",
-            AbstractBlock.Settings.create().noCollision()
-                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN));
+    public static final Block RICE_CROP = registerBlockWithoutBlockItem(
+            new RiceCropBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .mapColor(MapColor.DARK_GREEN)
+                    .registryKey(RICE_CROP_KEY)), RICE_CROP_KEY
+    );
 
+    private static RegistryKey<Block> getRegistryKey(String name) {
+        return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Rice.MOD_ID, name));
+    }
 
-    private static Block registerBlockWithoutBlockItem(String name, AbstractBlock.Settings blockSettings) {
-        Identifier id = Identifier.of(Rice.MOD_ID, name);
-        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
-        return Registry.register(Registries.BLOCK, key, new RiceCropBlock(blockSettings.registryKey(key)));
+    private static Block registerBlockWithoutBlockItem(Block block, RegistryKey<Block> key) {
+        return Registry.register(Registries.BLOCK, key, block);
     }
 
     public static void registerModBlocks() {
