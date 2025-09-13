@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "rice",
+	"version": "${version}",
+	"name": "Rice",
+	"description": "This is mod adds Rice and rice-related foods to the game (mainly Indian foods)",
+	"authors": [
+		"Sage"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/rice/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.sage.rice.Rice"
+		],
+		"fabric-datagen": [
+			"net.sage.rice.RiceDataGenerator"
+		],
+		"client": [
+			"net.sage.rice.RiceClient"
+		]
+	},
+	"mixins": [
+		"rice.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
