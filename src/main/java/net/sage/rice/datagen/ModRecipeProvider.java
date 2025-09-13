@@ -21,12 +21,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
             @Override
             public void generate() {
-                createShaped(RecipeCategory.MISC, ModItems.RICEBALL)
-                        .pattern(" D ")
+                createShaped(RecipeCategory.MISC, ModItems.RICEBALL, 4)
+                        .pattern("DDD")
                         .pattern("DWD")
-                        .pattern(" D ")
+                        .pattern("DDD")
                         .input('D', ModItems.RICE_DUST)
-                        .input('W', Items.POTION)
+                        .input('W', Items.WATER_BUCKET)
                         .criterion(hasItem(ModItems.RICE_DUST), conditionsFromItem(ModItems.RICE_DUST))
                         .offerTo(exporter);
             }
