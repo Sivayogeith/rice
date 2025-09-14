@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "rice:rice_dust",
+    "W": "minecraft:water_bucket"
+  },
+  "pattern": [
+    "DDD",
+    "DWD",
+    "DDD"
+  ],
+  "result": {
+    "count": 4,
+    "id": "rice:riceball"
+  }
+}
