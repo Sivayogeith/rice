@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.sage.rice.entity.ModEntities;
 import net.sage.rice.item.ModItems;
+import net.sage.rice.util.ModLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +18,6 @@ public class Rice implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModEntities.registerModEntities();
 		ModItems.registerModItems();
+		ModLootTableModifiers.modifyLootTables();
 	}
 }
