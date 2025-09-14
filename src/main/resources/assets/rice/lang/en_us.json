@@ -2,5 +2,8 @@
 {
   "block.rice.rice": "Rice",
   "item.rice.riceball": "Rice Ball",
-  "item.rice.rice_dust": "Rice Dust"
+  "item.rice.rice_dust": "Rice Dust",
+  "tooltip.rice.rice.tooltip": "Main ingredient for Briyani and Idly! (remember to wash them before cooking!)",
+  "tooltip.rice.riceball.tooltip": "SPLAT! (be careful! this does a lotta damage)",
+  "tooltip.rice.rice_dust.tooltip": "Raw rice ground into dust with an anvil."
 }

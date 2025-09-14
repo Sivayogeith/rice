@@ -1,7 +1,16 @@
 // 1.21.8	-999999999-01-01T00:00:00	Rice/Model Definitions
+68923e81de0e7445a44a33188ea6dd17a0e82f33 assets/rice/blockstates/rice_crop.json
 de90681b77eb545e328f8730822b336c2a6133a0 assets/rice/items/rice.json
 bc71a880ff92cca50846583f4ca6d35f9bfc37aa assets/rice/items/rice_dust.json
 9585f63926f174cfd502936fe494193737cc83c4 assets/rice/items/riceball.json
+84b6db6a8461575e9b5bb799d85724a097abd211 assets/rice/models/block/rice_crop_stage0.json
+a50b36e1ac43e26b7098a857dcb278a626b108e6 assets/rice/models/block/rice_crop_stage1.json
+e8e36105ee0432a43a838ae63fe7e73a73ade9e8 assets/rice/models/block/rice_crop_stage2.json
+1213ba798612baa87f72bbd3729a442afc06fa4f assets/rice/models/block/rice_crop_stage3.json
+49d583b944f67b3baf910640c3d05c1091005523 assets/rice/models/block/rice_crop_stage4.json
+c18217fbcdcf3f742f9662eb2d3cb5d6f53e0721 assets/rice/models/block/rice_crop_stage5.json
+226ac8ac7dacc13eb9d1822f85009f48293aeb08 assets/rice/models/block/rice_crop_stage6.json
+483e53ff85e66cf8985cf6347457644bf036dd91 assets/rice/models/block/rice_crop_stage7.json
 16a1f38653ee2ca87f32499ab0ca5f0d9350f07a assets/rice/models/item/rice.json
 55b05de3a6d3327ae870aec18c3eb1972b82b04b assets/rice/models/item/rice_dust.json
 2dc14ab4852675e9810eecfb6f246567af7895f1 assets/rice/models/item/riceball.json

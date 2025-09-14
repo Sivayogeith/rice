@@ -1,5 +1,6 @@
 package net.sage.rice;
 
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.sage.rice.block.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
@@ -19,5 +20,7 @@ public class Rice implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModItems.registerModItems();
 		ModLootTableModifiers.modifyLootTables();
+
+		CompostingChanceRegistry.INSTANCE.add(ModItems.RICE, 0.5f);
 	}
 }
