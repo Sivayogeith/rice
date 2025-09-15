@@ -9,11 +9,11 @@ This mod adds rice and rice-related items to the game!
 3. Rice Dust - Acquired by using an anvil while holding rice!
 4. Riceball - Deals 6 damage; 8 Rice Dust and a Water Bucket -> 4 Riceballs.
 
-## Features (for Hackcraft v3)
+## Features (for [Hackcraft v3](https://hackcraft.hackclub.com))
 1. Rice Crop
 2. Throwable Riceballs
 3. Rice Dust Mixin
 4. Modifying Vanilla Loot Tables
 
 ## Credits
-Rice Crop and Rice Textures all thanks to Flo! 
+Rice Crop and Rice Textures all thanks to Flo the Wizard! 
